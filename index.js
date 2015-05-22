@@ -19,7 +19,7 @@ app.get('/dl/:filename', function(req, res){
 app.use(express.static('public'));
 app.use('/dl', serveIndex('dl', {'icons': true}));
 
-var server = app.listen(80);
+var server = app.listen(1337);
 
 app.use(function(req, res, next) {
   res.status(404).sendFile(__dirname + '/public/' + '404.html');
